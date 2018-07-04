@@ -47,6 +47,8 @@ class WebviewManager {
             }
         });
 
+        CookieManager.getInstance().setAcceptThirdPartyCookies(this.webView, true);
+
         webView.setWebViewClient(webViewClient);
     }
 
