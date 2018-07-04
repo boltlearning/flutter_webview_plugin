@@ -82,6 +82,8 @@ static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
         [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"UserAgent": userAgent}];
     }
     
+    [NSHTTPCookieStorage sharedHTTPCookieStorage].cookieAcceptPolicy = NSHTTPCookieAcceptPolicyAlways;
+    
     CGRect rc;
     if (rect != nil) {
         rc = [self parseRect:rect];
